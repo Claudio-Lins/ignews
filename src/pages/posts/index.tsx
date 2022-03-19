@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps = async () => {
       excerpt:
         post.data.content.find(content => content.type === 'paragraph')
           ?.text ?? '',
-      updateAt: new Date(post.last_publication_date).toLocaleTimeString(
+      updateAt: new Date(post.last_publication_date).toLocaleDateString(
         'pt-PT',
         {
           day: '2-digit',
@@ -69,7 +69,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   })
 
-  console.log(JSON.stringify(response, null, 2))
+  // console.log(JSON.stringify(response, null, 2))
 
   return {
     props: { posts },
