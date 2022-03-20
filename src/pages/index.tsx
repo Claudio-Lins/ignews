@@ -12,6 +12,8 @@ interface HomeProps {
   }
 }
 
+type price = string
+
 export default function Home({ product }: HomeProps) {
   return (
     <>
